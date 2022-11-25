@@ -2,23 +2,7 @@ import React from "react"
 
 export default function Jogo(props){
 
-  const [palavraChave,setPalavraChave] = React.useState([])
-  const [mascara,setMascara] = React.useState([])
-  let selecionados = []
-
-  function sortearPalavra(){
-    let i = Math.floor(Math.random()*palavras.length)
-    let palavraSorteada = palavras[i]
-    setPalavraChave(palavraSorteada.split(''))
-    console.log(palavraSorteada)
-    for(i=0;i<palavraChave.length;i++){
-      if(selecionados.includes(palavraChave[i])){setMascara([...mascara,[palavraChave[i]]])}
-      else{setMascara([...mascara,"_"])}
-    }
-
-    
-  }
-
+  
 
     return(
        <div className="interface">
@@ -27,10 +11,10 @@ export default function Jogo(props){
           <div className="left">
           <button
            className="choose-word"
-           onClick = {sortearPalavra} 
+           onClick = {props.sortearPalavra} 
            data-teste="choose-word">Escolher Palavra</button>
           <p className="word" 
-          data-teste="word">{mascara}</p>
+          data-teste="word">{props.mascara}</p>
          </div>
          </div>
        </div>
