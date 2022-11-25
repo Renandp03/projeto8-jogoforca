@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Jogo(){
+export default function Jogo(props){
 
   const [palavraChave,setPalavraChave] = React.useState([])
   const [mascara,setMascara] = React.useState([])

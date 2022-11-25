@@ -2,7 +2,7 @@
 import Jogo from './componentes/Jogo';
 import Letras from './componentes/Letras';
 
-function App(){
+function App(props){
   return(
     <div>
     <Jogo/>
