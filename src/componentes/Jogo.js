@@ -2,19 +2,19 @@ import React from "react"
 
 export default function Jogo(props){
 
-  
+  const {sortearPalavra,mascara,contador} = props
 
     return(
        <div className="interface">
-         <img src="/img/forca0.png" alt="forca"/>
+         <img src={`/img/forca${contador}.png`} alt="forca"/>
          <div>
           <div className="left">
           <button
            className="choose-word"
-           onClick = {props.sortearPalavra} 
+           onClick = {sortearPalavra} 
            data-teste="choose-word">Escolher Palavra</button>
           <p className="word" 
-          data-teste="word">{props.mascara}</p>
+          data-teste="word">{mascara}</p>
          </div>
          </div>
        </div>
