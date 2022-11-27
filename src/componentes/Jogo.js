@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Jogo(props){
 
-  const {sortearPalavra,mascara,contador} = props
+  const {sortearPalavra,mascara,contador,vitoria} = props
 
     return(
        <div className="interface">
@@ -13,7 +13,7 @@ export default function Jogo(props){
            className="choose-word"
            onClick = {sortearPalavra} 
            data-teste="choose-word">Escolher Palavra</button>
-          <p className="word" 
+          <p className={`word ${contador==6 ? "red":""} ${vitoria==true ? "green":""}`}
           data-teste="word">{mascara}</p>
          </div>
          </div>
