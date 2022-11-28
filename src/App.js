@@ -22,6 +22,7 @@ const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H",
 
 
  function sortearPalavra(){
+  if(!mascara.includes("_")){
     setVitoria(false)
     setContador(0)
     letrasClicadasAtualizadas = []
@@ -36,7 +37,7 @@ const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H",
    }
    setMascara(novaMascara)
    setLetrasClicadas(letrasClicadasAtualizadas)
- }
+ }}
 
 
 
@@ -77,7 +78,6 @@ function clickLetter(letter){
 
 
 function perdeu(){
-  alert("perdeu mané")
   letrasClicadasAtualizadas = [...alfabeto]
   setLetrasClicadas(letrasClicadasAtualizadas)
   setMascara(palavraChave)
@@ -85,7 +85,6 @@ function perdeu(){
 }
   
 function ganhou(){
-  alert("ganhou")
   letrasClicadasAtualizadas = [...alfabeto]
   setLetrasClicadas(letrasClicadasAtualizadas)
   setVitoria(true)
@@ -97,7 +96,8 @@ function ganhou(){
   return(
     <div>
     <Jogo sortearPalavra={sortearPalavra} 
-    mascara={mascara} 
+    mascara={mascara}
+    palavraChave={palavraChave} 
     contador={contador}
     vitoria={vitoria}/>
 

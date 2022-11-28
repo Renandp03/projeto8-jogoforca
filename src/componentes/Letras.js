@@ -15,6 +15,7 @@ function Letra(props){
     const {button,clickLetter,letrasClicadasAtualizadas} = props
     return(
         <button className={`letter ${letrasClicadasAtualizadas.includes(button) ? "desabilitado":""}`} 
+        data-test="letter"
         onClick={()=> clickLetter(button)}>{button}
         </button> 
     )

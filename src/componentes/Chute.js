@@ -13,10 +13,11 @@ export default function Chute(props){
         <div className="chute">
             <p>Já sei a palavra</p>
         <input type="text" 
-        placehouder="Já sei a palavra"
+        data-test="guess-input"
         onChange={(e)=> setTexto(e.target.value)}
         value = {texto}/>
         <button className="letter"
+        data-test="guess-button"
         onClick={chutar}>Chutar</button>
         </div>
     )
