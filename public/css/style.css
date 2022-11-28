@@ -20,6 +20,8 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
+    margin-right: 50px;
 }
 
 .choose-word{
@@ -40,7 +42,8 @@ img{
     font-family: 'Noto Sans', sans-serif;
     letter-spacing: 2px;
     margin-bottom: 90px;
-    margin-left: 10px;
+    margin-right: 50px;
+    
 }
 
 

@@ -38,7 +38,7 @@ const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H",
    setMascara(novaMascara)
    setLetrasClicadas(letrasClicadasAtualizadas)
  }
- 
+
 
 
 
@@ -96,13 +96,15 @@ function ganhou(){
 
   return(
     <div>
-    <Jogo sortearPalavra={sortearPalavra} 
+    <Jogo
+    sortearPalavra={sortearPalavra} 
     mascara={mascara}
     palavraChave={palavraChave} 
     contador={contador}
     vitoria={vitoria}/>
 
-    <Letras alfabeto={alfabeto} 
+    <Letras
+     alfabeto={alfabeto} 
     clickLetter={(l)=>clickLetter(l)}
      letrasClicadasAtualizadas={letrasClicadasAtualizadas} 
      contador={contador}/>

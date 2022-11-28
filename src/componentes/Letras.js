@@ -1,6 +1,6 @@
 export default function Letras(props){
 
-    const {alfabeto,clickLetter,letrasClicadasAtualizadas,contador} = props
+    const {alfabeto,clickLetter,letrasClicadasAtualizadas} = props
    
     return(
 
