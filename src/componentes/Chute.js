@@ -1,11 +1,16 @@
 export default function Chute(props){
 
-    const {texto,setTexto,ganhou,palavraChave} = props
+    const {texto,setTexto,ganhou,palavraChave,perdeu,setContador,letrasClicadas,alfabeto} = props
     function chutar(){
-        if(texto == palavraChave){
-            ganhou()
+        if(letrasClicadas.length!=alfabeto.length){
+            if(texto == palavraChave){
+                ganhou()
+            }
+            else{
+                setContador(6)
+                perdeu()
+            }
         }
-        else{alert("Errou feio")}
         setTexto("")
     }
 

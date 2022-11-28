@@ -22,7 +22,7 @@ const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H",
 
 
  function sortearPalavra(){
-  if(!mascara.includes("_")){
+  
     setVitoria(false)
     setContador(0)
     letrasClicadasAtualizadas = []
@@ -37,7 +37,8 @@ const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H",
    }
    setMascara(novaMascara)
    setLetrasClicadas(letrasClicadasAtualizadas)
- }}
+ }
+ 
 
 
 
@@ -107,10 +108,14 @@ function ganhou(){
      contador={contador}/>
 
      <Chute 
+     alfabeto={alfabeto}
      texto={texto}
       setTexto={setTexto}
       ganhou={ganhou}
-      palavraChave={palavraChave}/>
+      perdeu={perdeu}
+      setContador={setContador}
+      palavraChave={palavraChave}
+      letrasClicadas={letrasClicadas}/>
     </div>
   )
 }
